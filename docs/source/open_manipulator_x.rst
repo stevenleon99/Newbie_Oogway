@@ -1,4 +1,4 @@
-Usage
+Open_Manipulator_X
 =====
 
 .. _installation:
@@ -12,7 +12,7 @@ To use Lumache, first install it using pip:
 
    (.venv) $ pip install lumache
 
-Open_Manipulator_X
+Open_Manipulator_X status
 ----------------
 
 To retrieve a list of random ingredients,
@@ -33,5 +33,14 @@ For example:
 ['shells', 'gorgonzola', 'parsley']
 
 
-TurtleBot_4
+Open_Manipulator_X service
+----------------
+
+Open_Manipulator_X moveit
+----------------
+
+Open_Manipulator_X gazebo
+----------------
+
+Open_Manipulator_X ArUco
 ----------------

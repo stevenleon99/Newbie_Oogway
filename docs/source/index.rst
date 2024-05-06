@@ -22,8 +22,6 @@ Contents
 --------
 
 .. toctree::
-
-   usage
-   OpenManipulatorX
-   TurtleBot4
+   open_manipulator_x
+   turtlebot_4
    
