@@ -7,11 +7,11 @@ Environment
 ------------
 
 This project was developed with the following environment and platform:
-- Ubuntu              22.04
-- ROS2                humble
-- ignition
-- openmanipulatorx    `emanual <https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/>`_
-- Intel Realsense     D435
+ * Ubuntu              22.04
+ * ROS2                humble
+ * ignition
+ * openmanipulatorx    `emanual <https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/>`_
+ * Intel Realsense     D435
 
 
 .. _installation:
