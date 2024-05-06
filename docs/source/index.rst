@@ -22,6 +22,7 @@ Contents
 --------
 
 .. toctree::
+   
    home <self>
    open_manipulator_x
    turtlebot_4
