@@ -13,3 +13,6 @@ Project dashboard:
 
 https://readthedocs.org/projects/newbie-oogway/
 
+Project example:
+
+https://docs.readthedocs.io/en/stable/examples.html
