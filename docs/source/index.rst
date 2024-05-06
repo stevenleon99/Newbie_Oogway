@@ -24,4 +24,5 @@ Contents
 .. toctree::
 
    usage
-   api
+   OpenManipulatorX
+   TurtleBot4

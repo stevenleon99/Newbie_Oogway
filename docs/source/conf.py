@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Newbie Oogway'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'newbie-oogway'
+copyright = '2024, Steve'
+author = 'Steve'
 
 release = '0.1'
 version = '0.1.0'
