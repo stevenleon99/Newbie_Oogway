@@ -9,9 +9,12 @@ Environment
 This project was developed with the following environment and platform:
  * Ubuntu              22.04
  * ROS2                humble
- * ignition
+ * ignition gazebo     6.16.0
+ * ignition service    11.4.1
+ * python              3.10.12
  * openmanipulatorx    `emanual <https://emanual.robotis.com/docs/en/platform/openmanipulator_x/overview/>`_
  * Intel Realsense     D435
+
 
 
 .. _installation:
@@ -40,38 +43,88 @@ Then goto the directory containing src folder and run rosdep
    $ rosdep install --from-paths src --ignore-src -r -y
 
 
+Then change the specific directory of ``mx_controllers.yaml``on your computer for the two files in package ``manipulatorx_ign``
+ * manipulator_camera.urdf.xacro
+ * manipulator_camera.urdf
+And one file in package ``manipulatorx_moveit``
+ * open_manipulator_x.urdf.xacro
+
+
 .. _Open_Manipulator_X status:
 
 Open_Manipulator_X status
 ----------------
-
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+.. code-block:: console
+   
+   $ source install/setup.bash
+   # start the controller for the arm
+   $ ros2 launch open_manipulator_x_controller open_manipulator_x_controller.launch.py 
+   $ ros2 run arm_subscriber test_armsubcriber 
+   # view the kinematic pose, joint positions and arm status
 
 
 .. _Open_Manipulator_X service:
 
 Open_Manipulator_X service
 ----------------
+.. code-block:: console
+   
+   $ source install/setup.bash
+   # start the controller for the arm
+   $ ros2 launch open_manipulator_x_controller open_manipulator_x_controller.launch.py 
+   # use the tele-op to control the joint positions
+   $ ros2 run arm_service test_movejoint
+   # <------------or---------------> #
+   # use the tele-op to control the gripper open or close
+   $ ros2 run arm_service test_movetool 
+   # <------------or---------------> #
+   # use the tele-op to control the move in x y or z in cartesian space
+   $ ros2 run arm_service test_movecart
+   # <------------or---------------> #
+   # run a pick-n-place program in fixed positions
+   $ ros2 run arm_service test_pnp
+
 
 .. _Open_Manipulator_X moveit:
 
 Open_Manipulator_X moveit
 ----------------
+.. code-block:: console
+
+   $ source install/setup.bash
+   # launch the moveit package
+   $ ros2 launch manipulatorx_moveit manipulator_moveit.launch.py
+
+| The moveit package demostrate the trajectory planning with several famous algorithm like PRM, RRT etc
+|
+| you can test your own planning algorithm by switch to custom planning pipeline: 
+.. code-block:: console
+   # Planning Configuration
+   # planning_pipeline_config = {
+   #     "move_group": {
+   #         "planning_plugin": "ompl_interface/OMPLPlanner",
+   #         "request_adapters": """default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints""",
+   #         "start_state_max_bounds_error": 0.1,
+   #     }
+   # }
+   # ompl_planning_yaml = load_yaml("manipulatorx_moveit", "config/ompl_planning.yaml")
+   # planning_pipeline_config["move_group"].update(ompl_planning_yaml)
+
+   # custom planning configuration
+   planning_pipeline_config = {
+      "move_group": {
+         "planning_plugin": "manipulatorx_moveit/ASBRPlanner",
+         "start_state_max_bounds_error": 0.1,
+      }
+   }
+   asbr_planning_yaml = load_yaml("manipulatorx_moveit", "config/custom_planning.yaml")
+   planning_pipeline_config["move_group"].update(asbr_planning_yaml)
+
+.. image:: images/custom_moveit_planner.png
+   :height: 100px
+   :width: 200px
+   :alt: custom planning in moveit
+
 
 .. _Open_Manipulator_X gazebo:
 
