@@ -16,6 +16,15 @@ This project was developed with the following environment and platform:
  * Intel Realsense     D435
 
 
+.. _Hardware:
+
+Hardware
+------------
+.. image:: images/hardware_architecture.png
+   :height: 200px
+   :width: 400px
+   :alt: custom planning in moveit
+
 
 .. _installation:
 
@@ -24,7 +33,7 @@ Installation
 
 To use open manipulator x, first install relevant libraries by:
 
-.. code-block:: console
+.. code-block:: bash
 
    $ sudo apt install ros-humble-moveit*
    $ sudo apt-get install ros-humble-control*
@@ -38,15 +47,16 @@ To use open manipulator x, first install relevant libraries by:
 
 Then goto the directory containing src folder and run rosdep 
 
-.. code-block:: console
+.. code-block:: bash
    
    $ rosdep install --from-paths src --ignore-src -r -y
 
 
-Then change the specific directory of ``mx_controllers.yaml``on your computer for the two files in package ``manipulatorx_ign``
+| Then change the specific directory of ``mx_controllers.yaml`` on your computer for the two files in package ``manipulatorx_ign``
  * manipulator_camera.urdf.xacro
  * manipulator_camera.urdf
-And one file in package ``manipulatorx_moveit``
+|
+| And one file in package ``manipulatorx_moveit``
  * open_manipulator_x.urdf.xacro
 
 
@@ -54,7 +64,7 @@ And one file in package ``manipulatorx_moveit``
 
 Open_Manipulator_X status
 ----------------
-.. code-block:: console
+.. code-block:: bash
    
    $ source install/setup.bash
    # start the controller for the arm
@@ -67,20 +77,20 @@ Open_Manipulator_X status
 
 Open_Manipulator_X service
 ----------------
-.. code-block:: console
+.. code-block:: bash
    
    $ source install/setup.bash
    # start the controller for the arm
    $ ros2 launch open_manipulator_x_controller open_manipulator_x_controller.launch.py 
    # use the tele-op to control the joint positions
    $ ros2 run arm_service test_movejoint
-   # <------------or---------------> #
+   # <------------or---------------> 
    # use the tele-op to control the gripper open or close
    $ ros2 run arm_service test_movetool 
-   # <------------or---------------> #
+   # <------------or---------------> 
    # use the tele-op to control the move in x y or z in cartesian space
    $ ros2 run arm_service test_movecart
-   # <------------or---------------> #
+   # <------------or---------------> 
    # run a pick-n-place program in fixed positions
    $ ros2 run arm_service test_pnp
 
@@ -121,8 +131,8 @@ Open_Manipulator_X moveit
    planning_pipeline_config["move_group"].update(asbr_planning_yaml)
 
 .. image:: images/custom_moveit_planner.png
-   :height: 100px
-   :width: 200px
+   :height: 200px
+   :width: 400px
    :alt: custom planning in moveit
 
 
@@ -130,6 +140,9 @@ Open_Manipulator_X moveit
 
 Open_Manipulator_X gazebo
 ----------------
+
+
+
 
 .. _Open_Manipulator_X ArUco:
 
