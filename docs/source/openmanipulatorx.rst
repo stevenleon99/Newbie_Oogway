@@ -22,7 +22,7 @@ Hardware
 ------------
 .. image:: images/hardware_architecture.png
    :height: 200px
-   :width: 400px
+   :width: 500px
    :alt: custom planning in moveit
 
 
@@ -151,7 +151,7 @@ Open_Manipulator_X gazebo
 
 .. raw:: html
 
-    <video controls>
+    <video controls width="640" height="360">
         <source src="videos/gazebo.webm" type="video/webm">
     </video>
 
