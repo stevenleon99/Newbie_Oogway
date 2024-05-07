@@ -176,9 +176,9 @@ Open_Manipulator_X ArUco
 
 
 .. image:: images/grasp_aruco_gif.gif
-   :height: 600px
+   :height: 450px
    :width: 800px
-   :alt: gazebo_gif
+   :alt: grasp_aruco_gif
 
 
 | The handeye calibration matrix is written into urdf, can be retrieved from:
