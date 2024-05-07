@@ -21,8 +21,8 @@ This project was developed with the following environment and platform:
 Hardware
 ------------
 .. image:: images/hardware_architecture.png
-   :height: 200px
-   :width: 500px
+   :height: 300px
+   :width: 400px
    :alt: custom planning in moveit
 
 
@@ -152,7 +152,7 @@ Open_Manipulator_X gazebo
 .. raw:: html
 
     <video controls width="640" height="360">
-        <source src="videos/gazebo.webm" type="video/webm">
+        <source src="videos/gazebo.mp4" type="video/mp4">
     </video>
 
 
