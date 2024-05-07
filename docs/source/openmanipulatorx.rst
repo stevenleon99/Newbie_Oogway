@@ -113,9 +113,11 @@ Open_Manipulator_X moveit
 |
 | you can test your own planning algorithm by switch to custom planning pipeline ``manipulator_moveit.launch.py``: 
 |
+
+
 .. code-block:: bash
 
-   # Planning Configuration
+   $ >>> Planning Configuration
    # planning_pipeline_config = {
    #     "move_group": {
    #         "planning_plugin": "ompl_interface/OMPLPlanner",
@@ -126,7 +128,7 @@ Open_Manipulator_X moveit
    # ompl_planning_yaml = load_yaml("manipulatorx_moveit", "config/ompl_planning.yaml")
    # planning_pipeline_config["move_group"].update(ompl_planning_yaml)
    
-   # custom planning configuration
+   $ >>> custom planning configuration
    $ planning_pipeline_config = {
    $   "move_group": {
    $       "planning_plugin": "manipulatorx_moveit/ASBRPlanner",
@@ -135,6 +137,7 @@ Open_Manipulator_X moveit
    $ }
    $ asbr_planning_yaml = load_yaml("manipulatorx_moveit", "config/custom_planning.yaml")
    $ planning_pipeline_config["move_group"].update(asbr_planning_yaml)
+
 
 |
 .. image:: images/custom_moveit_planner.png
