@@ -154,17 +154,12 @@ Open_Manipulator_X gazebo
    # you can run the node to see the arm move and view changes
    $ ros2 run manipulatorx_ign test_manipulatorx_ign_node 
 
-.. raw:: html
-
-    <video width="640" height="360" controls>
-        <source src="https://drive.google.com/file/d/1YDjLofF1BcLt6rigJ7vpDvC6HFSTa7_k/view?usp=drive_link">
-    </video>
-
 .. image:: images/gazebo_gif.gif
-   :height: 600px
+   :height: 450px
    :width: 800px
-   :alt: example GIF
-   :align: center
+   :alt: gazebo_gif
+
+
 
 .. _Open_Manipulator_X ArUco:
 
@@ -179,20 +174,15 @@ Open_Manipulator_X ArUco
    # you can run the node to see the arm move and pick up the aruco object in workspace automatically
    $ ros2 run manipulatorx_handeye search_aruco
 
+
+.. image:: images/grasp_aruco_gif.gif
+   :height: 600px
+   :width: 800px
+   :alt: gazebo_gif
+
+
 | The handeye calibration matrix is written into urdf, can be retrieved from:
 
 .. code-block:: bash
+
    $ ros2 run tf2_ros tf2_echo camera_color_optiocal_frame end_effector_link
-
-.. raw:: html
-
-    <video width="640" height="360" controls>
-        <source src="https://drive.google.com/file/d/1f6xxgANlvYF30k4fEXNSlsr_BJnMIFVo/view?usp=drive_link">
-    </video>
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://youtu.be/h3Q4JuSiSzg?si=QLtteToncmxYwH6k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
