@@ -99,7 +99,7 @@ Open_Manipulator_X service
 
 Open_Manipulator_X moveit
 ----------------
-.. code-block:: console
+.. code-block:: bash
 
    $ source install/setup.bash
    # launch the moveit package
@@ -108,7 +108,8 @@ Open_Manipulator_X moveit
 | The moveit package demostrate the trajectory planning with several famous algorithm like PRM, RRT etc
 |
 | you can test your own planning algorithm by switch to custom planning pipeline: 
-.. code-block:: console
+
+.. code-block:: python
    # Planning Configuration
    # planning_pipeline_config = {
    #     "move_group": {
@@ -140,8 +141,19 @@ Open_Manipulator_X moveit
 
 Open_Manipulator_X gazebo
 ----------------
+.. code-block:: bash
 
+   $ source install/setup.bash
+   # launch the moveit package
+   $ ros2 launch manipulatorx_ign manipulatorx_ign.launch.py
+   # you can run the node to see the arm move and view changes
+   $ ros2 run manipulatorx_ign test_manipulatorx_ign_node 
 
+.. raw:: html
+
+    <video controls>
+        <source src="videos/gazebo.webm" type="video/webm">
+    </video>
 
 
 .. _Open_Manipulator_X ArUco:
