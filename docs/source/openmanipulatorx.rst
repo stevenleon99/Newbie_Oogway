@@ -20,6 +20,7 @@ This project was developed with the following environment and platform:
 
 Hardware
 ------------
+
 .. image:: images/hardware_architecture.png
    :height: 300px
    :width: 400px
@@ -64,6 +65,7 @@ Then goto the directory containing src folder and run rosdep
 
 Open_Manipulator_X status
 ----------------
+
 .. code-block:: bash
    
    $ source install/setup.bash
@@ -77,6 +79,7 @@ Open_Manipulator_X status
 
 Open_Manipulator_X service
 ----------------
+
 .. code-block:: bash
    
    $ source install/setup.bash
@@ -99,6 +102,7 @@ Open_Manipulator_X service
 
 Open_Manipulator_X moveit
 ----------------
+
 .. code-block:: bash
 
    $ source install/setup.bash
@@ -141,6 +145,7 @@ Open_Manipulator_X moveit
 
 Open_Manipulator_X gazebo
 ----------------
+
 .. code-block:: bash
 
    $ source install/setup.bash
@@ -151,8 +156,8 @@ Open_Manipulator_X gazebo
 
 .. raw:: html
 
-    <video controls width="640" height="360">
-        <source src="videos/gazebo.mp4" type="video/mp4">
+    <video width="640" height="360" controls>
+        <source src="https://drive.google.com/file/d/1YDjLofF1BcLt6rigJ7vpDvC6HFSTa7_k/view?usp=drive_link" type="video/mp4">
     </video>
 
 
@@ -160,3 +165,25 @@ Open_Manipulator_X gazebo
 
 Open_Manipulator_X ArUco
 ----------------
+
+.. code-block:: bash
+
+   $ source install/setup.bash
+   # launch the pick aruco package
+   $ ros2 launch manipulatorx_handeye manipulatorx_handeye.launch.py
+   # you can run the node to see the arm move and pick up the aruco object in workspace automatically
+   $ ros2 run manipulatorx_handeye search_aruco
+
+
+| The handeye calibration matrix is written into urdf, can be retrieve from:
+.. code-block:: bash
+   $ ros2 run tf2_ros tf2_echo camera_color_optiocal_frame end_effector_link
+
+
+.. code-block:: bash
+
+   $ source install/setup.bash
+   # launch the pick aruco package
+   $ ros2 launch manipulatorx_handeye manipulatorx_handeye.launch.py
+   # you can run the node to see the arm move and pick up the aruco object in workspace automatically
+   $ ros2 run manipulatorx_handeye search_aruco
