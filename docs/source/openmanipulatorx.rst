@@ -112,30 +112,29 @@ Open_Manipulator_X moveit
 | The moveit package demostrate the trajectory planning with several famous algorithm like PRM, RRT etc
 |
 | you can test your own planning algorithm by switch to custom planning pipeline ``manipulator_moveit.launch.py``: 
-
+|
 .. code-block:: bash
-   # Planning Configuration
-   # planning_pipeline_config = {
-   #     "move_group": {
-   #         "planning_plugin": "ompl_interface/OMPLPlanner",
-   #         "request_adapters": """default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints""",
-   #         "start_state_max_bounds_error": 0.1,
-   #     }
-   # }
-   # ompl_planning_yaml = load_yaml("manipulatorx_moveit", "config/ompl_planning.yaml")
-   # planning_pipeline_config["move_group"].update(ompl_planning_yaml)
-
-   # custom planning configuration
-   planning_pipeline_config = {
-      "move_group": {
-         "planning_plugin": "manipulatorx_moveit/ASBRPlanner",
-         "start_state_max_bounds_error": 0.1,
-      }
-   }
-   asbr_planning_yaml = load_yaml("manipulatorx_moveit", "config/custom_planning.yaml")
-   planning_pipeline_config["move_group"].update(asbr_planning_yaml)
-
-
+   $ # Planning Configuration
+   $ # planning_pipeline_config = {
+   $ #     "move_group": {
+   $ #         "planning_plugin": "ompl_interface/OMPLPlanner",
+   $ #         "request_adapters": """default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints""",
+   $ #         "start_state_max_bounds_error": 0.1,
+   $ #     }
+   $ # }
+   $ # ompl_planning_yaml = load_yaml("manipulatorx_moveit", "config/ompl_planning.yaml")
+   $ # planning_pipeline_config["move_group"].update(ompl_planning_yaml)
+   $ 
+   $ # custom planning configuration
+   $ planning_pipeline_config = {
+   $   "move_group": {
+   $       "planning_plugin": "manipulatorx_moveit/ASBRPlanner",
+   $       "start_state_max_bounds_error": 0.1,
+   $    }
+   $ }
+   $ asbr_planning_yaml = load_yaml("manipulatorx_moveit", "config/custom_planning.yaml")
+   $ planning_pipeline_config["move_group"].update(asbr_planning_yaml)
+|
 .. image:: images/custom_moveit_planner.png
    :height: 200px
    :width: 400px
