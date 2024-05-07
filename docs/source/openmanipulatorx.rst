@@ -157,7 +157,7 @@ Open_Manipulator_X gazebo
 .. raw:: html
 
     <video width="640" height="360" controls>
-        <source src="https://drive.google.com/file/d/1YDjLofF1BcLt6rigJ7vpDvC6HFSTa7_k/view?usp=drive_link" type="video/mp4">
+        <source src="https://drive.google.com/file/d/1YDjLofF1BcLt6rigJ7vpDvC6HFSTa7_k/view?usp=drive_link">
     </video>
 
 
@@ -174,16 +174,13 @@ Open_Manipulator_X ArUco
    # you can run the node to see the arm move and pick up the aruco object in workspace automatically
    $ ros2 run manipulatorx_handeye search_aruco
 
+.. raw:: html
 
-| The handeye calibration matrix is written into urdf, can be retrieve from:
+    <video width="640" height="360" controls>
+        <source src="https://drive.google.com/file/d/1CSuoJ0T-C3FZ276To7XizN4hftvcOXLq/view?usp=drive_link" type="video/mov">
+    </video>
+
+
+| The handeye calibration matrix is written into urdf, can be retrieved from:
 .. code-block:: bash
    $ ros2 run tf2_ros tf2_echo camera_color_optiocal_frame end_effector_link
-
-
-.. code-block:: bash
-
-   $ source install/setup.bash
-   # launch the pick aruco package
-   $ ros2 launch manipulatorx_handeye manipulatorx_handeye.launch.py
-   # you can run the node to see the arm move and pick up the aruco object in workspace automatically
-   $ ros2 run manipulatorx_handeye search_aruco
