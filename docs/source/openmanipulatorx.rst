@@ -177,7 +177,7 @@ Open_Manipulator_X ArUco
 .. raw:: html
 
     <video width="640" height="360" controls>
-        <source src="https://drive.google.com/file/d/1CSuoJ0T-C3FZ276To7XizN4hftvcOXLq/view?usp=drive_link" type="video/mov">
+        <source src="https://drive.google.com/file/d/1f6xxgANlvYF30k4fEXNSlsr_BJnMIFVo/view?usp=drive_link">
     </video>
 
 
