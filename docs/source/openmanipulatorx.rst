@@ -54,11 +54,29 @@ Then goto the directory containing src folder and run rosdep
 
 
 | Then change the specific directory of ``mx_controllers.yaml`` on your computer for the two files in package ``manipulatorx_ign``
- * manipulator_camera.urdf.xacro
- * manipulator_camera.urdf
-|
+
+* manipulator_camera.urdf.xacro
+
+.. code-block:: bash
+   
+   Line22  <parameters>[your full directory]/mx_controllers.yaml</parameters>
+
+
+* manipulator_camera.urdf
+
+.. code-block:: bash
+   
+   Line350  <parameters>[your full directory]/mx_controllers.yaml</parameters>
+
+
 | And one file in package ``manipulatorx_moveit``
- * open_manipulator_x.urdf.xacro
+
+
+* open_manipulator_x.urdf.xacro
+
+.. code-block:: bash
+   
+   Line18  <parameters>[your full directory]/mx_controllers.yaml</parameters>
 
 
 .. _Open_Manipulator_X status:
@@ -129,14 +147,14 @@ Open_Manipulator_X moveit
    # planning_pipeline_config["move_group"].update(ompl_planning_yaml)
    
    $ >>> custom planning configuration
-   $ planning_pipeline_config = {
-   $   "move_group": {
-   $       "planning_plugin": "manipulatorx_moveit/ASBRPlanner",
-   $       "start_state_max_bounds_error": 0.1,
-   $    }
-   $ }
-   $ asbr_planning_yaml = load_yaml("manipulatorx_moveit", "config/custom_planning.yaml")
-   $ planning_pipeline_config["move_group"].update(asbr_planning_yaml)
+   planning_pipeline_config = {
+     "move_group": {
+         "planning_plugin": "manipulatorx_moveit/ASBRPlanner",
+         "start_state_max_bounds_error": 0.1,
+      }
+   }
+   asbr_planning_yaml = load_yaml("manipulatorx_moveit", "config/custom_planning.yaml")
+   planning_pipeline_config["move_group"].update(asbr_planning_yaml)
 
 
 |
