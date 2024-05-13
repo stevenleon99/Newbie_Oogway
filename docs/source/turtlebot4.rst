@@ -41,7 +41,20 @@ To successfully detect Aruco AR markers through Turtlebot4 camera, first install
 
 
 | More information on https://github.com/JMU-ROBOTICS-VIVA/ros2_aruco.git.
-As for the turtlebot4, we follow the turtlebot4 User Manual on https://turtlebot.github.io/turtlebot4-user-manual. We follow every steps to install the turtlebot4 gazebo simulation and turtlebot4 packages. Once installing ros2 aruco packages and turtlebot4 packages, our project's packages about turtlebot4 could be installed through colcon build. And it would work.
+As for the turtlebot4, we follow the turtlebot4 User Manual on https://turtlebot.github.io/turtlebot4-user-manual. We follow every steps to install the turtlebot4 gazebo simulation and turtlebot4 packages. 
+
+Once installing ros2 aruco packages and turtlebot4 packages, our project's packages about turtlebot4 could be installed through colcon build. And it would work.
+
+
+Package Specification
+---------------------
+
+The packages are listed as followed:
+* t4_wyman
+* move_turtlebot
+* ros2_aruco
+* spin_around
+
 
 
 .. _Package Specification:
