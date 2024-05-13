@@ -132,9 +132,9 @@ Real World Demo
    :alt: real_t4_gif
 
 
-.. _Real World Demo:
+.. _Simulation:
 
-Real World Demo
+Simulation
 ---------------
 
 .. image:: images/grasp_aruco_gif.gif
