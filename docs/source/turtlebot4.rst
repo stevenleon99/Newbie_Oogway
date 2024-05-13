@@ -99,17 +99,18 @@ move_turtlebot
 --------------
 
 The main idea for the Aruco AR marker detecting part of our project is as we run the turtlebot4, no matter in the gazebo simulation environment or in the real world, if the camera successfully detect the marker, our turtlebot4 will stop previous moving command and then automatically move toward the marker. We define a safe distance so the turtlebot4 will keep moving toward the marker until it's within the safe distance. 
+
 In this package, it mainly has "include" and "src" folder like the standard ros2 c++ package.
 
 Here is the description for functions achieved in this package.
 
-* Initialization: We initialize several 
+* Initialization: We initialize several 4*4 transformation matrix to save the relative relationships between different links. The final goal is to transform the marker position w.r.t. camera to position w.r.t. turtlebot4 baselink. Also, we define a subscription to ``/aruco_poses`` which will receive ``geometry_msgs::msg::PoseArray``. And we define a publisher to ``/cmd_vel`` to control the turtlebot4.
 
-* quat2matrix:
+* quat2matrix: A helper function to convert the quat and pos to matrix.
 
-* ar_cb:
+* ar_cb: In this function, it looks up the transform between  ``base_link``  and ``oakd_rgb_camera_optical_frame`` as well as receiving marker positions. It is used to calculate the transformation matrix. We define a timer in the initialization part so it will keep calculating the transformation.
 
-* move_cb:
+* move_cb: It changes the turtlebot4 velocities when the camera detects the marker. It checks the ``marker2base_Matrix`` to decide whether detecting a marker or not.
 
 
 .. _spin_around:
@@ -117,7 +118,7 @@ Here is the description for functions achieved in this package.
 spin_around
 ------------
 
-asdasd.
+The idea was when the turtlebot4 had not detected the marker, the turtlebot4 would around until the camera could see the marker. 
 
 
 
