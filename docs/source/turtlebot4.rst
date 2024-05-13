@@ -118,7 +118,7 @@ Here is the description for functions achieved in this package.
 spin_around
 ------------
 
-The idea was when the turtlebot4 had not detected the marker, the turtlebot4 would around until the camera could see the marker. 
+The idea is when the turtlebot4 had not detected the marker, the turtlebot4 would around until the camera could see the marker. 
 
 
 
