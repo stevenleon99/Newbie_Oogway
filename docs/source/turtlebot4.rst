@@ -71,6 +71,7 @@ t4_wyman
 --------
 
 This is a package similar to RSP homework 10. The main idea is that we load wyman building in gazebo first and we put a cube with a Aruco AR marker in this world. Also, we have a slam launch file to generate a map as well as a patrol launch file to do localization and navigation. Here is the description of each file/folder in this package.
+
 * config: it includes behavior tree file and navigation file.
 
 * launch: it includes slam and patrol launch files.
@@ -101,13 +102,14 @@ The main idea for the Aruco AR marker detecting part of our project is as we run
 In this package, it mainly has "include" and "src" folder like the standard ros2 c++ package.
 
 Here is the description for functions achieved in this package.
-*Initialization: We initialize several 
 
-*quat2matrix:
+* Initialization: We initialize several 
 
-*ar_cb:
+* quat2matrix:
 
-*move_cb:
+* ar_cb:
+
+* move_cb:
 
 
 .. _spin_around:
