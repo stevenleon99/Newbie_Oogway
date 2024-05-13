@@ -13,7 +13,7 @@ This project was developed with the following environment and platform:
  * ignition service    11.4.1
  * python              3.10.12
  * c++                 11.4.0
- * Eigen3
+ * Eigen3              3.4.0-2ubuntu2
 
 
 .. _Hardware:
@@ -47,6 +47,7 @@ Once installing ros2 aruco packages and turtlebot4 packages, our project's packa
 
 
 
+
 .. _Package Specification:
 
 Package Specification
@@ -54,8 +55,11 @@ Package Specification
 
 The packages are listed as followed.
 * t4_wyman
+
 * move_turtlebot
+
 * ros2_aruco
+
 * spin_around
 
 
