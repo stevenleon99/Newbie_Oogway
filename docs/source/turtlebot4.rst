@@ -19,7 +19,7 @@ This project was developed with the following environment and platform:
 .. _Hardware:
 
 Hardware
-------------
+--------
 
 Turtlebot4 from Wyman
 
@@ -46,21 +46,10 @@ As for the turtlebot4, we follow the turtlebot4 User Manual on https://turtlebot
 Once installing ros2 aruco packages and turtlebot4 packages, our project's packages about turtlebot4 could be installed through colcon build. And it would work.
 
 
-Package Specification
----------------------
-
-The packages are listed as followed:
-* t4_wyman
-* move_turtlebot
-* ros2_aruco
-* spin_around
-
-
-
 .. _Package Specification:
 
 Package Specification
-------------
+---------------------
 
 The packages are listed as followed.
 * t4_wyman
@@ -78,7 +67,7 @@ The packages are listed as followed.
 .. _t4_wyman:
 
 t4_wyman
-------------
+--------
 
 This is a package similar to RSP homework 10. The main idea is that we load wyman building in gazebo first and we put a cube with a Aruco AR marker in this world. Also, we have a slam launch file to generate a map as well as a patrol launch file to do localization and navigation. Here is the description of each file/folder in this package.
 * config: it includes behavior tree file and navigation file.
@@ -97,7 +86,7 @@ This is a package similar to RSP homework 10. The main idea is that we load wyma
 .. _ros2_aruco:
 
 ros2_aruco
-------------
+-----------
 
 This is the package from https://github.com/JMU-ROBOTICS-VIVA/ros2_aruco.git for Aruco AR marker detecting.
 
@@ -105,7 +94,7 @@ This is the package from https://github.com/JMU-ROBOTICS-VIVA/ros2_aruco.git for
 .. _move_turtlebot:
 
 move_turtlebot
-------------
+--------------
 
 The main idea for the Aruco AR marker detecting part of our project is as we run the turtlebot4, no matter in the gazebo simulation environment or in the real world, if the camera successfully detect the marker, our turtlebot4 will stop previous moving command and then automatically move toward the marker. We define a safe distance so the turtlebot4 will keep moving toward the marker until it's within the safe distance. 
 In this package, it mainly has "include" and "src" folder like the standard ros2 c++ package.
