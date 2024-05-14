@@ -11,14 +11,12 @@ obstacles. This addition addresses a common frustration among users of tradition
 clothing and other items that often impede their operation. By seamlessly blending the reliable movement and search 
 capabilities of a Roomba with the precision and adaptability of the OpenManipulatorX.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
 .. note::
 
-   This project is under active development.
+   It is easy to deploy the project on your computer following the installation steps in :ref:`openmanipulatorx` and :ref:`turtlebot4`.
+   First let's ``mkdir src`` in your workspace and clone the project into it.
 
-Contents、
+Contents
 --------
 
 .. toctree::
