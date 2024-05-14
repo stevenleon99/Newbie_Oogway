@@ -13,7 +13,7 @@ capabilities of a Roomba with the precision and adaptability of the OpenManipula
 
 .. note::
 
-   It is easy to deploy the project on your computer following the installation steps in :ref:`openmanipulatorx` and :ref:`turtlebot4`.
+   It is easy to deploy the project on your computer following the installation steps in `open_manipulator_x <https://newbie-oogway.readthedocs.io/en/latest/openmanipulatorx.html#>`_ and `turtlebot4 <https://newbie-oogway.readthedocs.io/en/latest/turtlebot4.html>`_.
    First let's ``mkdir src`` in your workspace and clone the project into it.
 
 Contents
