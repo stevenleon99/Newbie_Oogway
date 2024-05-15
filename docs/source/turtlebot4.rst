@@ -133,7 +133,7 @@ Real World Demo
 
 .. image:: images/real_world_a.gif
    :height: 533px
-   :width: 300px
+   :width: 533px
    :alt: real_world_a
 
 
