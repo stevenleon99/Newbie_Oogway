@@ -132,8 +132,6 @@ Real World Demo
    :alt: real_t4_gif
 
 .. image:: images/real_world_a.gif
-   :height: 533px
-   :width: 533px
    :alt: real_world_a
 
 
