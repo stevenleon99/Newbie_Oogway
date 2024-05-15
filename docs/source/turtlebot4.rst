@@ -137,10 +137,10 @@ Real World Demo
 Simulation
 ---------------
 
-.. image:: images/grasp_aruco_gif.gif
+.. image:: images/simulation.gif
    :height: 450px
    :width: 800px
-   :alt: grasp_aruco_gif
+   :alt: simulation_gif
 
 
 
